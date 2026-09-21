@@ -94,19 +94,6 @@
 
         <form action="filter-ppc" method="post" novalidate>
 
-            {{ radios({
-            idPrefix: 'stillBuyHRTPPC',
-            name: 'stillBuyHRTPPC',
-            value: data.stillBuyHRTPPC,
-            fieldset: {
-            legend: {
-            text: 'Do you still want to buy an HRT PPC?',
-            classes: 'nhsuk-fieldset__legend--m',
-            isPageHeading: false
-            }
-            }
-            }) }}
-
             {{ button({
             text: 'Continue',
             name: 'action',
