@@ -3,119 +3,128 @@
 {% block pageTitle %}Buy an NHS HRT Prescription Prepayment Certificate (HRT PPC){% endblock %}
 
 {% block content %}
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-            <h1 class="nhsuk-heading-l">You may save more with a PPC that covers all NHS prescriptions</h1>
+        <h1 class="nhsuk-heading-l">You may save more with a PPC that covers all NHS prescriptions</h1>
 
-             <p class="nhsuk-body">Depending on how many of your prescriptions are for items not covered by an HRT PPC, you may save more buying a 3 or 12 month PPC that covers all NHS prescriptions. This includes all HRT medication as well as any other items you get prescribed.</p>
+        <p class="nhsuk-body">Depending on how many of your prescriptions are for items not covered by an HRT PPC, you
+            may save more buying a 3 or 12 month PPC that covers all NHS prescriptions. This includes all HRT medication
+            as well as any other items you get prescribed.</p>
 
-            <!-- TICK ICON -->
-            {% set tickIcon %}
-                <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-                    <path fill="#007f3b" d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"></path>
-                </svg>
-            {% endset %}
+        <!-- TICK ICON -->
+        {% set tickIcon %}
+        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+            height="16" focusable="false" aria-hidden="true">
+            <path fill="#007f3b"
+                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z">
+            </path>
+        </svg>
+        {% endset %}
 
-            <!-- CROSS ICON -->
-            {% set crossIcon %}
-                <svg class="nhsuk-icon nhsuk-icon--cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-                    <path fill="#d5281b" d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
-                </svg>
-            {% endset %}
+        <!-- CROSS ICON -->
+        {% set crossIcon %}
+        <svg class="nhsuk-icon nhsuk-icon--cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+            height="16" focusable="false" aria-hidden="true">
+            <path fill="#d5281b"
+                d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z">
+            </path>
+        </svg>
+        {% endset %}
 
-            {{ table({
-                tableClasses: 'comparison-table',
-                responsive: false,
-                panel: false,
-                caption: 'Comparison of PPC and HRT PPC',
-                captionClasses: 'nhsuk-u-visually-hidden',
-                firstCellIsHeader: true,
-                head: [
-                    { html: '<span class="nhsuk-u-visually-hidden">Comparison</a>' },
-                    { text: 'HRT PPC' },
-                    { text: 'PPC' }
-                ],
-                rows: [
-                    [
-                        { text: 'Cost for 12 months' },
-                        { text: '£19.80'},
-                        { text: '£114.50' }
-                    ],
-                    [
-                        { text: 'Cost for 3 months' },
-                        { text: 'Not available'},
-                        { text: '£32.05' }
-                    ],
-                    [
-                        { html: 'Covers certain HRT medicines<br /><span class="nhsuk-u-margin-bottom-0 nhsuk-body-s nhsuk-u-font-weight-normal"><a class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-hormone-replacement-therapy-prescription-prepayment-certificate-hrt-ppc/medicines-covered-hrt-ppc">List of HRT medications covered(opens in a new tab)</a><span>' },
-                        { html: tickIcon + 'Yes</span>' },
-                        { html: tickIcon + 'Yes</span>' }
-                    ],
-                    [
-                        { html: 'Covers all NHS prescriptions' },
-                        { html: crossIcon + 'No</span>' },
-                        { html: tickIcon + 'Yes</span>' }
-                    ]
-                ]
+        {{ table({
+        tableClasses: 'comparison-table',
+        responsive: false,
+        panel: false,
+        caption: 'Comparison of PPC and HRT PPC',
+        captionClasses: 'nhsuk-u-visually-hidden',
+        firstCellIsHeader: true,
+        head: [
+        { html: '<span class="nhsuk-u-visually-hidden">Comparison</a>' },
+            { text: 'HRT PPC' },
+            { text: 'PPC' }
+            ],
+            rows: [
+            [
+            { text: 'Cost for 12 months' },
+            { text: '£19.80'},
+            { text: '£114.50' }
+            ],
+            [
+            { text: 'Cost for 3 months' },
+            { text: 'Not available'},
+            { text: '£32.05' }
+            ],
+            [
+            { html: 'Covers certain HRT medicines<br /><span
+                class="nhsuk-u-margin-bottom-0 nhsuk-body-s nhsuk-u-font-weight-normal"><a class="nhsuk-link"
+                    target="_blank"
+                    href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-hormone-replacement-therapy-prescription-prepayment-certificate-hrt-ppc/medicines-covered-hrt-ppc">List
+                    of HRT medications covered(opens in a new tab)</a><span>' },
+                    { html: tickIcon + 'Yes</span>' },
+                { html: tickIcon + 'Yes</span>' }
+            ],
+            [
+            { html: 'Covers all NHS prescriptions' },
+            { html: crossIcon + 'No</span>' },
+        { html: tickIcon + 'Yes</span>' }
+        ]
+        ]
+        }) }}
+
+
+
+
+
+        <h2 class="nhsuk-heading-m">Deciding whether to buy a PPC instead</h2>
+        <p class="nhsuk-body">You’ll save more money with a PPC if you get either:</p>
+
+        <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>at least 4 items in 3 months (and at least 2 are not for HRT)</li>
+            <li>at least 12 items a year (and at least 10 are not for HRT)</li>
+        </ul>
+
+        <!-- <p class="nhsuk-body"><a target="_blank" class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-prescription-prepayment-certificate-ppc">Find out more about PPCs that cover all NHS prescriptions on our website (opens in new tab)</a>.</p> -->
+
+        {{ insetText({
+        html: '<p class="nhsuk-body">If you have a PPC that covers all NHS prescriptions you do not need to buy an HRT
+            PPC. You can close this tab.</p>'
+        }) }}
+
+
+        <form action="filter-ppc" method="post" novalidate>
+
+            {{ radios({
+            idPrefix: 'stillBuyHRTPPC',
+            name: 'stillBuyHRTPPC',
+            value: data.stillBuyHRTPPC,
+            fieldset: {
+            legend: {
+            text: 'Do you still want to buy an HRT PPC?',
+            classes: 'nhsuk-fieldset__legend--m',
+            isPageHeading: false
+            }
+            }
+            }) }}
+
+            {{ button({
+            text: 'Continue',
+            name: 'action',
+            value: 'continue'
+            }) }}
+
+            {{ button({
+            text: 'Buy a PPC',
+            variant: 'secondary',
+            name: 'action',
+            value: 'buyPPC'
             }) }}
 
 
+        </form>
 
+        <p class="nhsuk-body"><a class="nhsuk-link" href="start">Cancel</a></p>
 
-            
-            <h2 class="nhsuk-heading-m">Deciding whether to buy a PPC</h2>
-            <p class="nhsuk-body">A PPC will save you more than an HRT PPC if you get either:</p>
-
-            <ul class="nhsuk-list nhsuk-list--bullet">
-              <li>4 or more items in a 3-month period and at least 2 are for items not covered by an HRT PPC</li>
-              <li>12 or more items in a 12-month period and at least 10 are for items not covered by an HRT PPC</li>
-            </ul>
-
-            <p class="nhsuk-body"><a target="_blank" class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/nhs-prescription-prepayment-certificate-ppc">Find out more about PPCs that cover all NHS prescriptions on our website (opens in new tab)</a>.</p>
-
-            {{ insetText({
-                html: '<p class="nhsuk-body">If you have a PPC that covers all NHS prescriptions you do not need to buy an HRT PPC.</p>'
-            }) }}
-
-
-            <form action="filter-ppc" method="post" novalidate>
-
-                {{ radios({
-                    idPrefix: 'stillBuyHRTPPC',
-                    name: 'stillBuyHRTPPC',
-                    value: data.stillBuyHRTPPC,
-                    fieldset: {
-                        legend: {
-                            text: 'Do you still want to buy an HRT PPC?',
-                            classes: 'nhsuk-fieldset__legend--m',
-                            isPageHeading: false
-                        }
-                    },
-                    items: [
-                        {
-                            value: 'yes',
-                            text: 'Yes'
-                        },
-                        {
-                            value: 'no',
-                            text: 'No'
-                        }
-                    ]
-                }) }}
-
-                {{ button({
-                    text: 'Continue'
-                }) }}
-
-            </form>
-
-            <p class="nhsuk-body"><a class="nhsuk-link" href="start">Cancel</a></p>
-
-        </div>
     </div>
+</div>
 {% endblock %}
-
-
-
-

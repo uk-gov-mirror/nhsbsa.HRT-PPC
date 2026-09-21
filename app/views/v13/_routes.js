@@ -50,11 +50,17 @@ router.post(/is-your-medicine-covered/, function (req, res) {
 });
 
 
-router.post(/filter-ppc/, function (req, res) {
-  let redirect = (req.session.data.stillBuyHRTPPC === 'yes') ? 'where-you-collect' : 'chosen-not-to-buy';
-  res.redirect(redirect);
-});
+router.post('/filter-ppc', function (req, res) {
 
+  if (req.body.action === 'continue') {
+    return res.redirect('where-you-collect');
+  }
+
+  if (req.body.action === 'buyPPC') {
+    return res.redirect('https://buy-prescription-prepayment-certificate.nhsbsa.nhs.uk/start');
+  }
+
+});
 router.post(/other-prescription-items/, function (req, res) {
   let redirect = (req.session.data.otherPrescriptionItems === 'yes') ? 'filter-ppc' : 'where-you-collect';
   res.redirect(redirect);
