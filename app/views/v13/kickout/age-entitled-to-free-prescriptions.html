@@ -1,0 +1,63 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  You can get free NHS prescriptions - Buy an NHS HRT Prescription Prepayment Certificate (HRT PPC)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{# block outerContent #}
+{# endblock #}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          You can get free NHS prescriptions
+        </h1>
+      </legend><br>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p>
+        Due to your age, you can get free NHS prescriptions. You do not need to buy an HRT PPC.
+      </p>
+      <p>You can get free NHS prescriptions if you’re:</p>
+      <ul>
+        <li>under 16</li>
+        <li>aged 60 or over</li>
+        
+      </ul>
+      
+      
+      
+      <p><a href="https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start">Find out more information about help with help costs on our website (opens in a new tab)</a>.</p>
+      
+
+      
+
+      <!-- End of content -->
+
+    </div>  
+
+  </div>
+{% endblock %}

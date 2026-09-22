@@ -61,6 +61,17 @@ router.post('/filter-ppc', function (req, res) {
   }
 
 });
+
+router.post('/free-prescriptions-soon', function (req, res) {
+
+  if (req.body.BuyHRTPPC === 'yes') {
+    res.redirect('/v13/name');
+  } else if (req.body.BuyHRTPPC === 'no') {
+    res.redirect('https://www.nhsbsa.nhs.uk/check-if-youre-eligible-help/help-health-costs-because-your-age-0');
+  }
+
+});
+
 router.post(/other-prescription-items/, function (req, res) {
   let redirect = (req.session.data.otherPrescriptionItems === 'yes') ? 'filter-ppc' : 'where-you-collect';
   res.redirect(redirect);

@@ -1,0 +1,88 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+You can get free prescriptions soon - Buy an NHS HRT Prescription Prepayment Certificate (HRT PPC)
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{# block outerContent #}
+{# endblock #}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <!-- Change the page heading -->
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        You can get free prescriptions soon
+      </h1>
+    </legend><br>
+
+    <!-- Add content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <p>
+      The information you gave us indicates you are 59 years old.<br><br>
+
+      When you’re 60, you’ll get free prescriptions. So you’ll no longer need an HRT PPC.<br><br>
+      Press continue to proceed or <a href="https://www.nhsbsa.nhs.uk/">go to NHS Business Services home</a> to cancel.
+    </p>
+
+    <form action="/v13/free-prescriptions-soon" method="post">
+
+      {{ radios({
+      fieldset: {
+      legend: {
+      text: "Do you still want to buy an HRT PPC?",
+      size: "l",
+      isPageHeading: false
+      }
+      },
+      idPrefix: "BuyHRTPPC",
+      name: "BuyHRTPPC",
+      items: [
+      {
+      value: "yes",
+      text: "Yes"
+      },
+      {
+      value: "no",
+      text: "No"
+      }
+      ]
+      }) }}
+
+      {{ button({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+
+
+
+
+    <!-- End of content -->
+
+  </div>
+
+</div>
+{% endblock %}
